@@ -99,7 +99,7 @@
             <select class="form-select" name="typemobil" aria-label="Default select example" required>
               <option selected>Type Mobil</option>
               <?php
-                $queryproduk = mysqli_query($conn, "SELECT * FROM merek_mobil WHERE id_admin='3'");
+                $queryproduk = mysqli_query($conn, "SELECT * FROM merek_mobil WHERE id_admin='26'");
                 while($rowmerek = mysqli_fetch_assoc($queryproduk)){
               ?>
                 <option value="<?= $rowmerek['nama_merek'] ?>"><?= $rowmerek['nama_merek'] ?></option>

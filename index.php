@@ -180,7 +180,7 @@
             <select class="form-select" name="typemobil" aria-label="Default select example" required>
               <option selected>Type Mobil</option>
               <?php 
-                $queryproduk = mysqli_query($conn, "SELECT * FROM merek_mobil WHERE id_admin='3'");
+                $queryproduk = mysqli_query($conn, "SELECT * FROM merek_mobil WHERE id_admin='26'");
                 while($rowproduk=mysqli_fetch_assoc($queryproduk)){
               ?>
                 <option value="<?= $rowproduk['nama_merek'] ?>"><?= $rowproduk['nama_merek'] ?></option>
