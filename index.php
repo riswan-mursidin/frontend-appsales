@@ -177,7 +177,7 @@
             <select class="form-select" aria-label="Default select example" name="typemobil" required>
               <option selected>Type mobil</option>
               <?php 
-                $queryproduk = mysqli_query($conn, "SELECT * FROM merek_mobil WHERE id_admin='4'");
+                $queryproduk = mysqli_query($conn, "SELECT * FROM merek_mobil WHERE id_admin='26'");
                 while($rowproduk=mysqli_fetch_assoc($queryproduk)){
               ?>
                 <option value="<?= $rowproduk['nama_merek'] ?>"><?= $rowproduk['nama_merek'] ?></option>
