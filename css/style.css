@@ -1,0 +1,767 @@
+/* Variabel color web */
+/* bacground-color: var(--warna-utama) */
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;500;600;700;800&display=swap");
+
+/* Root Color */
+:root {
+  --warna-bg: #fafafa;
+  --warna-utama: #364547;
+  --warna-navbar: #fafafa;
+  --warna-header: linear-gradient(to bottom, #364547 20%, #172224 80%);
+  --warna-judulmerek: linear-gradient(to bottom, #ff0000 0%, #7e0000 100%);
+  --warna-tombolutama: #c52300;
+  --warna-tomboldetail: #364547;
+  --warna-tombolinfo: linear-gradient(to bottom, #44bc32 0%, #127a02 100%);
+  --warna-tombolkontak: linear-gradient(to bottom, #ffb037 0%, #b66d00 100%);
+  /* warna Text */
+  --text-dark: #0f0f0f;
+  --text-light: #fff;
+
+  /* shadow */
+  --shadow-box: 0px 14px 31px rgba(0, 0, 0, 0.16),
+    0px 5.84887px 12.9511px rgba(0, 0, 0, 0.115017),
+    0px 3.12708px 6.92426px rgba(0, 0, 0, 0.0953772),
+    0px 1.75302px 3.88168px rgba(0, 0, 0, 0.08),
+    0px 0.931014px 2.06153px rgba(0, 0, 0, 0.0646228),
+    0px 0.387416px 0.85785px rgba(0, 0, 0, 0.0449833);
+
+  /* border radius */
+  --border-radius-global: 10px;
+  --border-radius-tombol: 15px 1px 15px 1px;
+
+  /* font */
+  --font-utama: "Raleway", sans-serif;
+  --font-kedua: "Open Sans", sans-serif;
+
+  /* Slide warna */
+  --slide-open: translateX(0);
+  --slide-close: translateX(-85%);
+}
+/* theme */
+body[data-color-mode="red"] {
+  --warna-bg: #fafafa;
+  --warna-navbar: #fff;
+  --warna-utama: #8f0000;
+  --warna-header: #ff0000;
+  --warna-judulmerek: #c90000;
+  --warna-tombolutama: #c52300;
+  --warna-tomboldetail: #6e0000;
+}
+body[data-color-mode="blue"] {
+  --warna-bg: #c8e0ff;
+  --warna-navbar: #c8e0ff;
+  --warna-utama: #0b0049;
+  --warna-header: #2600ff;
+  --warna-judulmerek: #c90000;
+  --warna-tombolutama: #c52300;
+  --warna-tomboldetail: #170099;
+}
+body[data-color-mode="green"] {
+  --warna-bg: #f1fff1;
+  --warna-navbar: #f1fff1;
+  --warna-utama: #004100;
+  --warna-header: #007a00;
+  --warna-judulmerek: #c90000;
+  --warna-tombolutama: #c52300;
+  --warna-tomboldetail: #002400;
+}
+body[data-color-mode="orange"] {
+  --warna-bg: #f9ffc3;
+  --warna-navbar: #f9ffc3;
+  --warna-utama: #a76400;
+  --warna-header: #ff9900;
+  --warna-judulmerek: #c90000;
+  --warna-tombolutama: #c52300;
+  --warna-tomboldetail: #ff7300;
+}
+body[data-color-mode="pink"] {
+  --warna-bg: #fcd9df;
+  --warna-navbar: #fcd9df;
+  --warna-utama: #e23754;
+  --warna-header: #ff3859;
+  --warna-judulmerek: #c90000;
+  --warna-tombolutama: #c52300;
+  --warna-tomboldetail: #9b0055;
+}
+
+/* Admin edit warna */
+
+.editwarna {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  z-index: 100;
+  color: var(--text-light);
+  color: #0f0f0f;
+  background: var(--warna-bg);
+  border-radius: var(--border-radius-tombol);
+  box-shadow: var(--shadow-box);
+  padding: 1rem;
+  transform: var(--slide-close);
+  transition: 1s;
+}
+
+.editwarna-open {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  z-index: 1;
+  color: var(--text-light);
+  color: #0f0f0f;
+  background-color: rgba(255, 255, 255, 0.644);
+  border-radius: var(--border-radius-tombol);
+  box-shadow: var(--shadow-box);
+  padding: 1rem;
+  padding-left: 1rem;
+  transform: var(--slide-open);
+  transition: 1s;
+  max-width: fit-content;
+}
+
+.text-gantiwarna {
+  position: fixed;
+}
+
+/* global */
+body {
+  background-color: var(--warna-bg);
+  font-family: var(--font-utama);
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+}
+h5 {
+  font-weight: bold;
+}
+
+/* header */
+.navbar-brand {
+    max-width:"80px";
+}
+#header {
+  background: var(--warna-header);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: var(--font-kedua);
+}
+#header a {
+  color: var(--text-light);
+}
+/* navbar */
+.navbar-brand img {
+  height: 46px;
+}
+.navbar {
+  font-family: var(--font-utama);
+  background-color: var(--warna-navbar);
+}
+.navbar a {
+  color: var(--text-dark);
+}
+.navbar a:hover {
+  color: var(--text-light);
+  opacity: 0.7;
+}
+.navbar li {
+  margin-left: 20px;
+}
+
+/* tombol */
+.tombol-login a {
+  background: var(--warna-tombolkontak);
+  /* tombol */
+  box-shadow: var(--shadow-box);
+}
+.tombol-login:hover a {
+  background: var(--warna-tombolkontak);
+}
+.tombol-login .nav-link {
+  color: var(--text-light);
+}
+/* header home */
+#headerhome {
+  background-color: var(--warna-utama);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+}
+#kantor {
+  background: var(--warna-header);
+  color: var(--text-light);
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem;
+}
+/* header page */
+#headerpage {
+  background-color: var(--warna-utama);
+  color: var(--text-light);
+  padding: 1rem;
+  font-weight: bold;
+}
+#headerpage h1 {
+  text-align: left;
+}
+#headerpage h3 {
+  text-align: right;
+  font-weight: 200;
+}
+
+/* introsales */
+#introsales {
+  background-color: var(--warna-utama);
+  margin-top: 1rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--text-light);
+}
+
+#introsales img {
+  border-radius: var(--border-radius-global);
+  max-width: 300px;
+}
+#introsales a {
+  color: var(--text-light);
+}
+
+.tombol-nama-sales {
+  color: #fff;
+  position: relative;
+  margin: auto;
+  width: 55%;
+  padding: 0px;
+  text-align: center;
+  border-radius: var(--border-radius-tombol);
+  box-shadow: var(--shadow-box);
+  background: var(--warna-judulmerek);
+  margin-top: -20px;
+  cursor: pointer;
+}
+.jabatan {
+  margin-top: -15px;
+  padding-bottom: 5px;
+}
+.nama-sales {
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.tombol-info {
+  text-align: center;
+  width: 47%;
+  background: var(--warna-tombolinfo);
+  border-radius: var(--border-radius-tombol);
+  box-shadow: var(--shadow-box);
+  padding-top: 20px;
+  justify-content: center;
+}
+.tombol-kontak {
+  text-align: center;
+  width: 47%;
+  background: var(--warna-tombolkontak);
+  border-radius: var(--border-radius-tombol);
+  box-shadow: var(--shadow-box);
+  padding-top: 20px;
+  justify-content: center;
+}
+
+/* produk */
+#daftar-produk {
+  background-image: url(../img/bg-produk.png) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.daftar-produk {
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: var(--border-radius-global);
+  box-shadow: var(--shadow-box);
+}
+
+.daftar-produk a {
+  color: var(--text-light);
+}
+
+.daftar-produk h4 {
+  font-weight: 800;
+  color: var(--text-light);
+  background: var(--warna-judulmerek);
+  padding: 0.5rem;
+  border-radius: var(--border-radius-tombol);
+  box-shadow: var(--shadow-box);
+}
+
+.daftar-produk h5 {
+  font-family: var(--font-kedua);
+  font-weight: bold;
+  color: red;
+  margin-top: -0.75rem;
+}
+.type-produk {
+  margin-top: -0.5rem;
+  font-family: var(--font-kedua);
+}
+
+.detail-produk {
+  text-align: center;
+  background-color: var(--warna-tomboldetail);
+  color: var(--text-light);
+  padding: 0.75rem;
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius-global);
+  box-shadow: var(--shadow-box);
+  cursor: pointer;
+}
+/* Form Buyer */
+#form-buyer {
+  background-color: var(--warna-utama);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#form-buyer h5 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-floating label {
+  margin-left: 1rem;
+}
+.kirim-form button {
+  color: var(--text-light);
+  font-size: smaller;
+}
+
+/* Tombol */
+.kirim-form {
+  text-align: center;
+  background: var(--warna-tombolinfo);
+  border-radius: var(--border-radius-tombol);
+  box-shadow: var(--shadow-box);
+  padding-top: 0.75rem;
+}
+.info-lengkap {
+  text-align: center;
+  background: var(--warna-tombolkontak);
+  border-radius: var(--border-radius-global);
+  box-shadow: var(--shadow-box);
+  padding-top: 0.5rem;
+  padding-bottom: 0.2rem;
+}
+
+/* artikel home */
+.artikel-home {
+  margin-top: 1rem;
+}
+.artikel-home a {
+  color: var(--text-light);
+}
+.artikel-home img {
+  border-radius: var(--border-radius-global);
+}
+#artikel-home h5 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* galeri home */
+#galeri-home {
+  margin-top: 1rem;
+  text-align: center;
+}
+#galeri-home img {
+  border-radius: var(--border-radius-tombol);
+  box-shadow: var(--shadow-box);
+}
+#galeri-home a {
+  color: var(--text-light);
+}
+
+/* footer */
+#footer {
+  background-color: var(--warna-utama);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: var(--text-light);
+  margin-bottom: 100px;
+}
+
+#footer a {
+  color: rgb(228, 228, 228);
+}
+#footer span {
+  margin-left: 0.5rem;
+}
+
+.tombol-float img {
+  display: none;
+}
+/* menu footer */
+#menu-footer {
+  background-color: var(--warna-utama);
+  padding: 1rem;
+  color: #fff;
+  font-size: 10px;
+}
+#menu-footer .material-icons {
+  padding-top: 1rem;
+  font-size: 25px;
+  margin: 0;
+}
+#menu-footer a {
+  color: #fff;
+}
+.menu-telp {
+  background-color: red;
+}
+
+/* List Produk */
+.judul-merek {
+  background: var(--warna-judulmerek);
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+  border-radius: var(--border-radius-tombol);
+}
+.detail-judul-merek {
+  background: var(--warna-tomboldetail);
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+  margin-top: -0.5rem;
+  border-radius: var(--border-radius-tombol);
+}
+.table {
+  box-shadow: var(--shadow-box);
+  border-radius: var(--border-radius-global);
+  background-color: #fff;
+  font-family: var(--font-kedua);
+}
+/* Video Frame */
+
+.video-frame {
+  width: 100% !important;
+  height: 500px;
+}
+/* Detail Produk */
+#type-detail-produk {
+  background-image: url(../img/bg-produk.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+/* Kredit */
+#kredit {
+  background: var(--warna-judulmerek);
+  text-align: center;
+  color: var(--text-light);
+  padding: 1rem;
+}
+#kredit a {
+  color: var(--text-light);
+}
+
+.hitung-kredit {
+  background: var(--warna-tombolkontak);
+  padding: 1rem;
+  border-radius: var(--border-radius-global);
+}
+/* highlight */
+#highlight {
+  background: var(--warna-utama);
+  padding: 1rem;
+  color: var(--text-light);
+  text-align: center;
+}
+#highlight a {
+  color: #fff;
+}
+#highlight img {
+  border-radius: var(--border-radius-tombol);
+}
+
+#pilih-warna {
+  background: var(--warna-bg);
+  padding: 1rem;
+  color: var(--text-light);
+  text-align: center;
+}
+#pilih-warna a {
+  color: #fff;
+}
+#pilih-warna img {
+  border-radius: var(--border-radius-tombol);
+}
+.spesifikasi {
+  color: var(--text-dark);
+}
+
+/* carousel */
+.carousel h5 {
+  margin-bottom: -0.5rem;
+  background: var(--warna-utama);
+  position: relative;
+  left: 25%;
+  width: 50%;
+  opacity: 0.5;
+}
+/* promo */
+#ambil-promo {
+  margin-top: 1rem;
+  color: #fff;
+  background: var(--warna-utama);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow-box);
+}
+#ambil-promo a {
+  color: #fff;
+}
+.ambil-info {
+  background: var(--warna-tombolinfo);
+  border-radius: var(--border-radius-tombol);
+  padding: 1rem;
+}
+
+#list-promo img {
+  border-radius: var(--border-radius-global);
+}
+#list-promo a {
+  color: #fff;
+}
+/* Mobile View */
+@media (max-width: 834.99px) {
+  /* Promo Detail */
+  #ambil-promo {
+    font-size: smaller;
+  }
+  /* video frame */
+  .video-frame {
+    width: 100% !important;
+    height: 200px;
+    border-radius: 10px;
+    justify-content: center;
+  }
+  /* Highlight */
+  #highlight {
+    font-size: smaller;
+  }
+  #highlight h6 {
+    font-size: smaller;
+  }
+  #pilih-warna {
+    font-size: smaller;
+  }
+  #pilih-warna h6 {
+    font-size: smaller;
+  }
+  /* Produk */
+  .judul-merek {
+    font-weight: smaller;
+    padding: 0.3rem;
+  }
+  .detail-judul-merek {
+    font-weight: smaller;
+    padding: 0.3rem;
+  }
+  .table {
+    font-size: smaller;
+  }
+  #introsales img {
+    max-width: 200px;
+  }
+}
+/* Kontak */
+#kontak {
+  text-align: center;
+}
+
+#kontak img {
+  max-width: 250px;
+  border-radius: 20rem;
+}
+/* tombol sosmed */
+.btn-whatsapp {
+  background-color: #25d366;
+  padding: 1rem;
+
+  color: #fff;
+  border-radius: var(--border-radius-tombol);
+  box-shadow: var(--shadow-box);
+  cursor: pointer;
+}
+.btn-whatsapp:hover {
+  background-color: #128c7e;
+  box-shadow: none;
+  transition-delay: 100ms;
+}
+.btn-instagram {
+  background-color: #e17760;
+  padding: 1rem;
+  margin: 0;
+  margin-right: 0.2rem;
+  color: #fff;
+  border-radius: var(--border-radius-tombol);
+  box-shadow: var(--shadow-box);
+  cursor: pointer;
+}
+.btn-instagram:hover {
+  background-color: #d45437;
+  box-shadow: none;
+  transition-delay: 100ms;
+}
+.btn-facebook {
+  background-color: #3b5998;
+  padding: 1rem;
+  margin: 0;
+  margin-right: 0.2rem;
+  color: #fff;
+  border-radius: var(--border-radius-tombol);
+  box-shadow: var(--shadow-box);
+  cursor: pointer;
+}
+.btn-facebook:hover {
+  background-color: #0f2d6e;
+  box-shadow: none;
+  transition-delay: 100ms;
+}
+.btn-website {
+  background-color: #db2020;
+  padding: 1rem;
+  margin: 0;
+  margin-right: 0.2rem;
+  color: #fff;
+  border-radius: var(--border-radius-tombol);
+  box-shadow: var(--shadow-box);
+  cursor: pointer;
+}
+.btn-website:hover {
+  background-color: #970808;
+  box-shadow: none;
+  transition-delay: 100ms;
+}
+/* Simulasi kredit */
+#simulasi-kredit {
+  text-align: center;
+}
+#simulasi-kredit a {
+  color: #fff;
+}
+#simulasi-kredit, .form {
+  font-family: var(--font-kedua);
+}
+.form-control {
+  font-family: var(--font-kedua);
+}
+
+.hitung-angsuran {
+  background: var(--warna-judulmerek);
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: var(--border-radius-tombol);
+  box-shadow: var(--shadow-box);
+  cursor: pointer;
+}
+.hitung-angsuran:hover {
+  box-shadow: none;
+  background: var(--warna-utama);
+  transition: 0.2s;
+}
+#simulasi-kredit table {
+  font-family: var(--font-kedua);
+}
+
+@media (max-width: 575.98px) {
+    
+  P,
+  h5,
+  h4,
+  h3,
+  h1,
+  a {
+    font-size: smaller;
+  }
+  /* kontak */
+  #kontak img {
+    max-width: 200px;
+    border-radius: 10rem;
+  }
+
+  /* introsales */
+  #introsales img {
+    max-width: 200px;
+  }
+  #introsales {
+    text-align: center;
+  }
+
+  .tombol-info {
+    margin: auto;
+    padding-top: 1rem;
+    width: 40%;
+  }
+  .tombol-info p {
+    font-size: smaller;
+  }
+  .tombol-kontak {
+    margin: auto;
+    padding-top: 1rem;
+    width: 40%;
+  }
+  /* produk */
+
+  /* artikel home */
+  #artikel-home {
+    text-align: center;
+  }
+  .info-lengkap {
+    padding-top: 0.75rem;
+    justify-content: center;
+  }
+  #artikel-home h5 {
+    margin-top: 0;
+    text-align: center;
+  }
+  /* footer */
+  #footer {
+    background-color: var(--warna-utama);
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+
+    color: var(--text-light);
+    font-size: 7px;
+  }
+
+  #footer span {
+    font-size: 10px;
+  }
+  /* tombol-float */
+  .tombol-float img {
+    display: inherit;
+    max-width: 60px;
+    position: fixed;
+    top: 90%;
+    left: 80%;
+    z-index: 99;
+  }
+}
+
+/* mobile 376px */
+@media (max-width: 320px) {
+  .daftar-produk h4 {
+    font-size: 5px;
+  }
+  .tombol-float {
+    max-width: 150px;
+    left: 30% !important;
+  }
+}
