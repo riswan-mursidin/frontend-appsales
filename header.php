@@ -57,7 +57,7 @@
   </head>
   <body data-color-mode="glr">
 
-  <!-- Admin edit warna -->
+  <!-- Admin edit warna ID Admin -->
   <div class="coontainer">
       <div
         id="control"
