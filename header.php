@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <<!-- link google analytic -->
+    <!-- link google analytic -->
     <?php  
     $querygoogle = mysqli_query($conn, "SELECT * FROM google_analysis WHERE id_admin='3'");
     $rowgoogle = mysqli_fetch_assoc($querygoogle);
