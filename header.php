@@ -40,15 +40,16 @@
     <!-- Slide -->
     <link rel="stylesheet" href="css/splide.min.css" />
     <!-- Share Butttom -->
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6108cff0f506cf0019dc20b5&product=inline-share-buttons' async='async'></script>
     <!-- <script
       async=""
       src="https://buttons-config.sharethis.com/js/6108cff0f506cf0019dc20b5.js"
-    ></script> -->
+    ></script>
     <script
       type="text/javascript"
       src="https://platform-api.sharethis.com/js/sharethis.js#property=6108cff0f506cf0019dc20b5&amp;product=inline-share-buttons"
       async="async"
-    ></script>
+    ></script> -->
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/logo-icon-dark.svg" />
