@@ -62,7 +62,7 @@
         <h5 class="mt-3">PROMO TERBARU</h5>
         <hr />
         <?php 
-        $querypromoterbaru = mysqli_query($conn, "SELECT * FROM promo_mobil WHERE id_admin='14' ORDER BY id_promo DESC LIMIT 1");
+        $querypromoterbaru = mysqli_query($conn, "SELECT * FROM promo_mobil WHERE id_admin='3' ORDER BY id_promo DESC LIMIT 1");
         $rowpromoup = mysqli_fetch_assoc($querypromoterbaru) ?>
         <div class="row artikel-home">
           <div class="col-12 col-sm-4 mt-3">

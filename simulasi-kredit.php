@@ -68,6 +68,14 @@
                         <span class="input-group-text" >%</span>
                     </div>
                 </div>
+                <div class="row justify-content-center">
+                    <div class="col mb-3">
+                    <input type="button" onclick="hasilHitung()" class="btn btn-danger btn-save" value="HITUNG ANGSURAN" style="font-size:smaller">
+                    </div>
+                    <div class="col mb-3">
+                    <button type="reset" class="btn btn-warning btn-save" style="font-size:smaller">RESET HITUNGAN</button>
+                    </div>
+                </div>
             </div>
             <div id="myDIV">
                 <h6 class="mt-3">Hasil</h6>
@@ -85,14 +93,7 @@
                     <label for="">Angsuran Perbulan</label>
                     <input class="form-control" type="text" name="angsuran" placeholder="Rp. 0.00" aria-label="Disabled input example" disabled>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col mb-3">
-                    <input type="button" onclick="hasilHitung()" class="btn btn-danger btn-save" value="HITUNG ANGSURAN" style="font-size:smaller">
-                    </div>
-                    <div class="col mb-3">
-                    <button type="reset" class="btn btn-warning btn-save" style="font-size:smaller">RESET HITUNGAN</button>
-                    </div>
-                </div>
+                
         </div>
       </form>
       <!-- Hasil Hitungan -->

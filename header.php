@@ -6,23 +6,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-   <!-- link google analytic -->
+      <<!-- link google analytic -->
     <?php  
-    $querygoogle = mysqli_query($conn, "SELECT * FROM google_analysis WHERE id_admin='26'");
+    $querygoogle = mysqli_query($conn, "SELECT * FROM google_analysis WHERE id_admin='3'");
     $rowgoogle = mysqli_fetch_assoc($querygoogle);
     echo $rowgoogle['script_analysis'];
     ?>
 
     <!-- link fb analytic -->
     <?php  
-    $queryfb = mysqli_query($conn, "SELECT * FROM fb_pixel WHERE id_admin='26'");
+    $queryfb = mysqli_query($conn, "SELECT * FROM fb_pixel WHERE id_admin='3'");
     $rowfb = mysqli_fetch_assoc($queryfb);
     echo $rowfb['script_pixel'];
     ?>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     
     <!-- Bootstrap CSS -->
     <link
@@ -52,10 +52,105 @@
     ></script>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img/logo.png" />
+    <link rel="shortcut icon" href="img/logo-icon-dark.svg" />
     <title>WEBITE SALES</title>
   </head>
-  <body data-color-mode="<?= $rowprofile['tema_webside'] ?>">
+  <body data-color-mode="glr">
+
+  <!-- Admin edit warna -->
+  <div class="coontainer">
+      <div
+        id="control"
+        class="editwarna btn d-flex flex-row"
+        onclick="fungsi()"
+      >
+        <button
+          id="red"
+          style="
+            background-color: red;
+            padding: 1rem;
+            border-radius: 50px;
+            border: none;
+          "
+          class="shadow-sm ms-2"
+        ></button>
+
+        <button
+          id="blue"
+          style="
+            background-color: blue;
+            padding: 1rem;
+            border-radius: 50px;
+            border: none;
+          "
+          class="shadow-sm ms-2"
+        ></button>
+
+        <button
+          id="green"
+          style="
+            background-color: green;
+            padding: 1rem;
+            border-radius: 50px;
+            border: none;
+          "
+          class="shadow-sm ms-2"
+        ></button>
+
+        <button
+          id="orange"
+          style="
+            background-color: orange;
+            padding: 1rem;
+            border-radius: 50px;
+            border: none;
+          "
+          class="shadow-sm ms-2"
+        ></button>
+
+        <button
+          id="pink"
+          style="
+            background-color: pink;
+            padding: 1rem;
+            border-radius: 50px;
+            border: none;
+          "
+          class="shadow-sm ms-2"
+        ></button>
+
+        <button
+          id="default"
+          style="
+            background-color: #364547;
+            padding: 1rem;
+            border-radius: 50px;
+            border: none;
+          "
+          class="shadow-sm ms-2"
+        ></button>
+        <button
+          id="default"
+          style="
+            background-image: linear-gradient(
+              to right,
+              red,
+              orange,
+              yellow,
+              green,
+              blue,
+              indigo,
+              violet
+            );
+            padding: 1rem;
+            border-radius: 50px;
+            border: none;
+            color: #fff;
+          "
+          class="shadow-sm ms-2"
+        ></button>
+      </div>
+    </div>
 
     <!-- Akhir Admin edit marna -->
     <!--  Header -->
@@ -82,11 +177,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <?php if( $rowprofile['logo'] != "" ){ ?>
         <a class="navbar-brand" href="index">
           <img src="<?= $rowprofile['logo'] ?>" alt="img"
         /></a>
-        <?php } ?>
         <button
           class="navbar-toggler"
           type="button"
