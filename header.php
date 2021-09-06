@@ -10,7 +10,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+   <!-- link google analytic -->
+    <?php  
+    $querygoogle = mysqli_query($conn, "SELECT * FROM google_analysis WHERE id_admin='26'");
+    $rowgoogle = mysqli_fetch_assoc($querygoogle);
+    echo $rowgoogle['script_analysis'];
+    ?>
 
+    <!-- link fb analytic -->
+    <?php  
+    $queryfb = mysqli_query($conn, "SELECT * FROM fb_pixel WHERE id_admin='26'");
+    $rowfb = mysqli_fetch_assoc($queryfb);
+    echo $rowfb['script_pixel'];
+    ?>
     
     <!-- Bootstrap CSS -->
     <link
