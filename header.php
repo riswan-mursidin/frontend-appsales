@@ -6,6 +6,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- link google analytic -->
     <?php  
     $querygoogle = mysqli_query($conn, "SELECT * FROM google_analysis WHERE id_admin='3'");
@@ -19,10 +22,6 @@
     $rowfb = mysqli_fetch_assoc($queryfb);
     echo $rowfb['script_pixel'];
     ?>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     
     <!-- Bootstrap CSS -->
     <link
