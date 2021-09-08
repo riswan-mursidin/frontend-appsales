@@ -53,7 +53,7 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/logo-icon-dark.svg" />
-    <title>WEBITE SALES | WEBSITE KHUSUS SALES MARKETING MOBIL DAN MOTOR INDONESIA </title>
+    <title>WEBSITE SALES | WEBSITE KHUSUS SALES MARKETING MOBIL DAN MOTOR INDONESIA </title>
   </head>
   <body data-color-mode="glr">
 
